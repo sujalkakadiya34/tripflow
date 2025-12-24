@@ -3,10 +3,20 @@ $insert = false;
 
 if(isset($_POST['name'])){
 
-    $server = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "trip";
+    // Check if running locally or on InfinityFree
+    if ($_SERVER['SERVER_NAME'] == "localhost") {
+        // Local XAMPP
+        $server   = "localhost";
+        $username = "root";
+        $password = "";
+        $database = "trip";
+    } else {
+        // InfinityFree live server
+        $server   = "sql123.infinityfree.com"; // replace with your host
+        $username = "if0_40754731_user";       // replace with your DB username
+        $password = "your_password";           // replace with your DB password
+        $database = "if0_40754731_trip";       // replace with your DB name
+    }
 
     $con = mysqli_connect($server, $username, $password, $database);
 
@@ -36,6 +46,7 @@ if(isset($_POST['name'])){
     $con->close();
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
