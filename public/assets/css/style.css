@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+ 
+body {
+    min-height: 100vh;
+    top: -40px;
+    position: relative;
+}
+ 
+body::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("..//images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.8;           
+    z-index: -2;
+}
+ 
+body::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.4);
+    z-index: -1;
+}
+ 
+.container {
+    width: 95%;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 6px;
+}
+ 
+.container h3 {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 6px;
+    font-family: 'sriracha', cursive;
+}
+ 
+.container p {
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 20px;
+    font-family: 'sriracha', cursive;
+}
+
+.submitMsg {
+    font-size: 30px;
+    color: green;
+    font: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ 
+input,
+textarea {
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-size: 14px;
+}
+ 
+textarea {
+    height: 180px;
+    resize: none;
+}
+ 
+.btn {
+    padding: 10px 22px;
+    margin: 15px 5px;
+    border: none;
+    background-color: purple;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 20px;
+}
+
+.btn:hover {
+    background-color: #6a1b9a;
+}
