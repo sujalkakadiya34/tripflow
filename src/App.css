@@ -1,38 +1,156 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  background: #0f172a;
   color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  width: 360px;
+  margin: 100px auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: none;
+}
+
+.btn.primary {
+  width: 100%;
+  padding: 10px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+/* HEADER BASE */
+.app-header {
+  width: 100%;
+  height: 68px;
+  background: #0b1324;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+/* LOGO */
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+.logo span {
+  color: #4f6cff;
+}
+
+/* NAV */
+.header-nav {
+  display: flex;
+  gap: 32px;
+}
+.header-nav a {
+  color: #c7d2fe;
+  font-size: 14px;
+  cursor: pointer;
+}
+.header-nav a:hover {
+  color: #fff;
+}
+
+/* RIGHT */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* SIGN IN */
+.signin-btn {
+  background: #4f6cff;
+  border: none;
+  padding: 8px 16px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* PROFILE */
+.profile-wrapper {
+  position: relative;
+}
+.avatar img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* DROPDOWN */
+.profile-dropdown {
+  position: absolute;
+  right: 0;
+  top: 48px;
+  width: 180px;
+  background: #0f172a;
+  border-radius: 10px;
+  padding: 6px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.profile-dropdown button {
+  width: 100%;
+  padding: 10px;
+  background: none;
+  border: none;
+  color: #e5e7eb;
+  text-align: left;
+  cursor: pointer;
+}
+.profile-dropdown button:hover {
+  background: rgba(255,255,255,0.08);
+}
+.profile-dropdown .logout {
+  color: #ef4444;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+.hamburger span {
+  width: 22px;
+  height: 2px;
+  background: white;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .header-nav {
+    position: absolute;
+    top: 68px;
+    left: 0;
+    width: 100%;
+    background: #0b1324;
+    flex-direction: column;
+    padding: 16px;
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .header-nav.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
   }
 }
