@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Alert from "./Alert";
 import emailjs from "emailjs-com";
 
-// EmailJS init
 emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
 
 function Form() {
