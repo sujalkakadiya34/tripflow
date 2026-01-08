@@ -1,0 +1,257 @@
+.footer {
+  position: relative;
+  background: linear-gradient(180deg, #0b1220 0%, #020617 100%);
+  color: #cbd5f5;
+  padding: 90px 40px 0;
+  font-family: "Inter", system-ui, sans-serif;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(99,102,241,0.25), transparent 70%);
+  opacity: 0.6;
+}
+
+.footer::after {
+  content: "";
+  position: absolute;
+  bottom: -140px;
+  left: -140px;
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, rgba(14,165,233,0.2), transparent 70%);
+  opacity: 0.5;
+}
+
+.footer-container {
+  position: relative;
+  max-width: 1320px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2.2fr 1fr 1fr 1.5fr;
+  gap: 70px;
+  z-index: 1;
+}
+
+.footer-brand h3 {
+  color: #ffffff;
+  font-size: 22px;
+  margin: 0;
+}
+
+.brand-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.brand-logo {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #020617;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.brand-text {
+  line-height: 1.75;
+  max-width: 380px;
+  font-size: 14.5px;
+  color: #b6c2e2;
+}
+
+.social-icons {
+  display: flex;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  position: relative;
+}
+
+.social-icons a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.15);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.social-icons a:hover::after {
+  opacity: 1;
+}
+
+.social-icons a:active::after {
+  opacity: 0.25;
+}
+
+.footer-column h4 {
+  color: #ffffff;
+  font-size: 15.5px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.footer-column h4::after {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: linear-gradient(90deg, #6366f1, #0ea5e9);
+  margin-top: 8px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 13px;
+}
+
+.footer-column ul li a {
+  color: #cbd5f5;
+  font-size: 14px;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-column ul li a:hover {
+  color: #ccd0de;
+}
+
+
+.footer-column ul li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.footer-column ul li a:hover::before {
+  transform: scaleX(1);
+}
+
+.footer-column ul li a:active::before {
+  transform: scaleX(1);
+  opacity: 0.5;
+}
+
+.contact-column {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #cbd5f5;
+  position: relative;
+}
+.contact-item:hover {
+  color: #ccd0de;
+}
+
+.contact-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.contact-item:hover::after {
+  opacity: 20.2;
+}
+
+.contact-item:active::after {
+  opacity: 0.4;
+}
+
+.contact-item svg {
+  min-width: 18px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.contact-item span {
+  max-width: 280px;
+}
+
+.footer-bottom {
+  margin-top: 70px;
+  padding: 22px 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+@media (max-width: 1100px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding: 70px 20px 0;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .brand-text {
+    max-width: 100%;
+  }
+
+  .contact-item span {
+    max-width: 100%;
+  }
+
+  .social-icons {
+    margin-top: 22px;
+  }
+}
