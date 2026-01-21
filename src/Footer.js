@@ -16,7 +16,6 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
 
-        {/* Brand */}
         <div className="footer-brand">
           <div className="brand-header">
             <div className="brand-logo">TF</div>
@@ -36,7 +35,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Explore */}
         <div className="footer-column">
           <h4>Explore</h4>
           <ul>
@@ -48,7 +46,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Support */}
         <div className="footer-column">
           <h4>Support</h4>
           <ul>
@@ -60,7 +57,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Contact */}
         <div className="footer-column contact-column">
           <h4>Contact</h4>
 
@@ -76,7 +72,8 @@ const Footer = () => {
 
           <div className="contact-item">
             <FaLocationDot />
-            <span>1017-iwetechs, RK-superme, Near nana mova circle, 150 Feet Ring Road, Rajkot, Gujarat.</span>
+            <span>1017, RK Supreme, Near nana mava circle, 150 feet ring road,
+                  Rajkot, Gujarat - 360005</span>
           </div>
         </div>
 
