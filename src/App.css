@@ -550,9 +550,10 @@ body {
   color: black;
   border: 1px solid rgba(0, 0, 0, 0.678);
   background: var(--transition);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
 }
 
-.hero-buttons button:hover {
+.btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 18px 40px rgba(0,0,0,0.35);
 }
@@ -791,8 +792,8 @@ body {
 }
 
 .destination-showcase {
-  margin-top: -70px;
-  margin-bottom: -40px;
+  margin-top: -80px;
+  margin-bottom: -100px;
   padding: 6.5rem 6%;
   background: #f8f5f0;
   text-align: center;
@@ -930,6 +931,17 @@ body {
 
 .destination-card-pro:hover .destination-title {
   transform: translateY(0);
+}
+ 
+.destination-card,
+.destination-card-pro {
+  background-color: transparent !important;  
+  box-shadow: none !important;             
+}
+
+.destination-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
 }
 
 @media (max-width: 1024px) {
