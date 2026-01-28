@@ -1,22 +1,26 @@
 .toast {
   position: fixed;
-  top: 50px;
-  right: -320px; /* start off-screen for animation */
+  top: calc(var(--navbar-height, 72px) + 12px);
+  right: -320px;
   display: flex;
   align-items: center;
   gap: 10px;
-  width: 290px; /* medium size */
+  width: 290px;
   padding: 10px 14px;
   border-radius: 12px;
   background: #ffffff;
   box-shadow: 
     0 8px 22px rgba(0,0,0,0.12),
     0 1px 0 rgba(255,255,255,0.6) inset;
+
   animation: slideIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  z-index: 9999;
+
+  z-index: 99999;  
+
   font-family: system-ui, -apple-system, BlinkMacSystemFont;
   color: #111827;
 }
+
 
 .toast-success {
   border-left: 3px solid #22c55e;

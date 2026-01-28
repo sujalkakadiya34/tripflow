@@ -38,7 +38,6 @@ function Form() {
       const data = await res.json();
 
       if (data.success) {
-        
         emailjs.send(
           process.env.REACT_APP_EMAILJS_SERVICE_ID,
           process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
@@ -79,67 +78,71 @@ function Form() {
   };
 
   return (
-    <div className="container" id="trip-form">
-      {alert && (
-        <Alert
-          type={alert.type}
-          message={alert.message}
-          onClose={() => setAlert(null)}
-        />
-      )}
+    <>
+    <section id="trip-form-wrapper">
+      <div className="container" id="trip-form">
+        {alert && (
+          <Alert
+            type={alert.type}
+            message={alert.message}
+            onClose={() => setAlert(null)}
+          />
+        )}
 
-      <h3>Trip Registration</h3>
+        <h3>Trip Registration</h3>
 
-      <form onSubmit={handleSubmit}>
-        <input
-          name="name"
-          value={form.name}
-          onChange={handleChange}
-          placeholder="Name"
-          required
-        />
-        <input
-          name="age"
-          type="number"
-          value={form.age}
-          onChange={handleChange}
-          placeholder="Age"
-          required
-        />
-        <input
-          name="gender"
-          value={form.gender}
-          onChange={handleChange}
-          placeholder="Gender"
-          required
-        />
-        <input
-          name="email"
-          type="email"
-          value={form.email}
-          onChange={handleChange}
-          placeholder="Email"
-          required
-        />
-        <input
-          name="phone"
-          value={form.phone}
-          onChange={handleChange}
-          placeholder="Phone"
-          required
-        />
-        <textarea
-          name="other"
-          value={form.other}
-          onChange={handleChange}
-          placeholder="Other info"
-        ></textarea>
+        <form onSubmit={handleSubmit}>
+          <input
+            name="name"
+            value={form.name}
+            onChange={handleChange}
+            placeholder="Name"
+            required
+          />
+          <input
+            name="age"
+            type="number"
+            value={form.age}
+            onChange={handleChange}
+            placeholder="Age"
+            required
+          />
+          <input
+            name="gender"
+            value={form.gender}
+            onChange={handleChange}
+            placeholder="Gender"
+            required
+          />
+          <input
+            name="email"
+            type="email"
+            value={form.email}
+            onChange={handleChange}
+            placeholder="Email"
+            required
+          />
+          <input
+            name="phone"
+            value={form.phone}
+            onChange={handleChange}
+            placeholder="Phone"
+            required
+          />
+          <textarea
+            name="other"
+            value={form.other}
+            onChange={handleChange}
+            placeholder="Other info"
+          ></textarea>
 
-        <button type="submit" className="btn primary">
-          Submit
-        </button>
-      </form>
-    </div>
+          <button type="submit" className="btn primary">
+            Submit
+          </button>
+        </form>
+      </div>
+    </section>
+    </>
   );
 }
 
