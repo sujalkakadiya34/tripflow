@@ -1,4 +1,3 @@
-import React, { useEffect, useRef } from "react";
 import ContactCTA from "./ContactCTA";
 import Form from "./Form";
 import "./App.css";
