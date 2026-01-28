@@ -71,6 +71,7 @@ const DestinationShowcase = () => {
   }, [isDesktop, pages.length]);
 
   return (
+    <>
     <section className="destination-showcase">
       {isDesktop ? (
         <div className="destination-grid destination-grid-cross">
@@ -113,8 +114,8 @@ const DestinationShowcase = () => {
         </div>
       )}
     </section>
+    </>
   );
 };
 
 export default DestinationShowcase;
-x 
