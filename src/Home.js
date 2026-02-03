@@ -6,6 +6,7 @@ import CapabilitiesSection from "./CapabilitiesSection";
 import EngagementSection from "./EngagementSection";
 import AiAgentsSection from "./AiAgentsSection";
 import TrustSection from "./TrustSection";
+import HeroSupport from "./HeroSupport";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
         <EngagementSection />
         <AiAgentsSection />
         <TrustSection />
+        <HeroSupport />
       </main>
     </>
   );
