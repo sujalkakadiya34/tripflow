@@ -52,10 +52,9 @@ const CustomerTestimonial = () => {
             </div>
           </div>
 
-<a href="https://iwetechs.com" className="case-study-link">
-  <span className="case-study-text">Case study ↗</span>
-</a>
-
+        <a href="https://iwetechs.com" className="case-study-link">
+          <span className="case-study-text">Case study ↗</span>
+        </a>
         </div>
       </div>
     </section>
