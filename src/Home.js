@@ -8,6 +8,7 @@ import AiAgentsSection from "./AiAgentsSection";
 import TrustSection from "./TrustSection";
 import HeroSupport from "./HeroSupport";
 import CustomerTestimonial from "./CustomerTestimonial";
+import ClientTestimonials from "./ClientTestimonials";
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
         <TrustSection />
         <HeroSupport />
         <CustomerTestimonial />
+        <ClientTestimonials />
       </main>
     </>
   );
