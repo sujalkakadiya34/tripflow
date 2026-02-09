@@ -1825,6 +1825,7 @@ body {
 
 
 /* start ClientTestimonials */
+
 :root {
   --max-width: 1320px;
   --space-xs: clamp(10px, 1vw, 14px);
@@ -1919,26 +1920,105 @@ body {
   }
 }
 
-@media (hover: none) and (pointer: coarse) {
+/* ================= RESPONSIVE – FIXED ================= */
+@media (max-width: 1024px) {
   .ct-grid {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
+    gap: 36px;
   }
+
   .ct-wrapper {
-    padding: var(--space-md) 16px;
+    padding-block: 36px;
+    padding-inline: 48px;
+    margin-top: 0;
   }
+
   .ct-card {
-    min-height: 500px;
+    min-height: 640px;
+    padding: 36px 40px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
   }
+
+  .ct-logo img {
+    height: 110px;
+    width: auto;
+    object-fit: contain;
+    margin: 0 0 24px 0;
+  }
+
   .ct-quote {
-    flex-grow: 1;
+    font-size: 30px;
+    line-height: 1.55;
+    margin: 0 0 36px 0;
+    text-wrap: balance;
+    word-break: normal;
+    hyphens: auto;
   }
+
   .ct-author {
-    margin-top: 0;
+    margin-top: 54px;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .ct-avatar img {
+    width: 84px;
+    height: 84px;
+  }
+
+  .ct-author-text h4 {
+    font-size: 28px;
+    line-height: 1.6;
+    font-weight: 600;
+  }
+
+  .ct-author-text span {
+    font-size: 24px;
+    line-height: 1.85;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
   }
 }
 
+@media (max-width: 480px) {
+  .ct-wrapper {
+    padding-block: 32px;
+    padding-inline: 36px;
+  }
+
+  .ct-card {
+    min-height: 600px;
+    padding: 32px 34px;
+  }
+
+  .ct-author {
+    gap: 20px;
+  }
+
+  .ct-avatar img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .ct-author-text h4 {
+    font-size: 23px;
+    line-height: 1.55;
+  }
+
+  .ct-author-text span {
+    font-size: 19px;
+    line-height: 1.7;
+  }
+
+  .ct-quote {
+    font-size: 26px;
+    line-height: 1.5;
+    text-wrap: balance;
+    word-break: normal;
+    hyphens: auto;
+  }
+}
 
 /* End ClientTestimonials */
