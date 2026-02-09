@@ -39,6 +39,7 @@ const ClientTestimonials = () => {
             </div>
 
             <p className="ct-quote">“{item.quote}”</p>  
+            
             <div className="ct-author">
               <div className="ct-avatar">
                 <img src={item.avatar} alt={item.name} />
