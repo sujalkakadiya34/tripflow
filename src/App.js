@@ -10,6 +10,7 @@ import "./Navbar.css";
 
 function App() {
   return (
+    <>
     <Router>
       <Navbar />
 
@@ -25,10 +26,12 @@ function App() {
             </h1>
           }
         />
-      </Routes>
+        console.log("LIVE DEPLOY CHECK - 09 FEB");
 
+      </Routes>
       <Footer />
     </Router>
+    </>
   );
 }
 
