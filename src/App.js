@@ -26,8 +26,6 @@ function App() {
             </h1>
           }
         />
-        console.log("LIVE DEPLOY CHECK - 09 FEB");
-
       </Routes>
       <Footer />
     </Router>

@@ -1847,27 +1847,35 @@ body {
   background: #ffffff;
 }
 
+/* 🔹 CENTER SPACE REDUCED (desktop only) */
 .ct-grid {
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-md);
+  gap: 20px;
 }
 
 .ct-card {
+  --card-pad-x: var(--space-md);
   background: var(--card-bg);
   border-radius: var(--radius);
   padding: var(--space-md);
   display: flex;
   flex-direction: column;
+  min-height: 400px;
   height: 100%;
-  min-height: 380px;
+  position: relative;
+}
+.ct-grid > .ct-card:nth-child(3n + 1) {
+  margin-left: -4px;
 }
 
+/* 🔹 CONTENT LEFT ALIGN (SAME COLUMN) */
+
 .ct-logo img {
-  height: clamp(22px, 3vw, 28px);
+  height: clamp(22px, 5vw, 44px);
   width: auto;
   object-fit: contain;
 }
@@ -1877,14 +1885,16 @@ body {
   font-size: var(--fs-md);
   line-height: 1.6;
   color: #111;
-  flex-grow: 0;
 }
 
+/* 🔹 AUTHOR ALIGNED TO SAME LEFT EDGE */
 .ct-author {
+  position: absolute;
+  bottom: 28px;
+  inset-inline: var(--card-pad-x);
   display: flex;
   align-items: center;
   gap: var(--space-sm);
-  margin-top: auto;
 }
 
 .ct-avatar img {
@@ -1898,6 +1908,7 @@ body {
   display: flex;
   flex-direction: column;
   min-width: 0;
+  margin-left: -8px;
 }
 
 .ct-author-text h4 {
@@ -1911,16 +1922,13 @@ body {
   color: #555;
   white-space: nowrap;
   overflow: hidden;
+  line-height: 22px;
   text-overflow: ellipsis;
 }
 
-@media (max-width: 1024px) {
-  .ct-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+/* ================= RESPONSIVE ================= */
+/* (unchanged except padding sync note below) */
 
-/* ================= RESPONSIVE – FIXED ================= */
 @media (max-width: 1024px) {
   .ct-grid {
     grid-template-columns: 1fr;
@@ -1934,32 +1942,24 @@ body {
   }
 
   .ct-card {
+    --card-pad-x: 40px;
     min-height: 640px;
-    padding: 36px 40px;
-    display: flex;
-    flex-direction: column;
+    padding: 36px 40px 140px;
   }
 
   .ct-logo img {
     height: 110px;
-    width: auto;
-    object-fit: contain;
-    margin: 0 0 24px 0;
+    margin-bottom: 24px;
   }
 
   .ct-quote {
     font-size: 30px;
     line-height: 1.55;
-    margin: 0 0 36px 0;
-    text-wrap: balance;
-    word-break: normal;
-    hyphens: auto;
   }
 
   .ct-author {
-    margin-top: 54px;
+    bottom: 48px;
     gap: 24px;
-    align-items: center;
   }
 
   .ct-avatar img {
@@ -1969,31 +1969,23 @@ body {
 
   .ct-author-text h4 {
     font-size: 28px;
-    line-height: 1.6;
-    font-weight: 600;
   }
 
   .ct-author-text span {
     font-size: 24px;
-    line-height: 1.85;
     white-space: normal;
-    overflow: visible;
-    text-overflow: unset;
   }
 }
 
 @media (max-width: 480px) {
-  .ct-wrapper {
-    padding-block: 32px;
-    padding-inline: 36px;
-  }
-
   .ct-card {
+    --card-pad-x: 34px;
     min-height: 600px;
-    padding: 32px 34px;
+    padding: 32px 34px 120px;
   }
 
   .ct-author {
+    bottom: 36px;
     gap: 20px;
   }
 
@@ -2004,20 +1996,15 @@ body {
 
   .ct-author-text h4 {
     font-size: 23px;
-    line-height: 1.55;
   }
 
   .ct-author-text span {
     font-size: 19px;
-    line-height: 1.7;
   }
 
   .ct-quote {
     font-size: 26px;
     line-height: 1.5;
-    text-wrap: balance;
-    word-break: normal;
-    hyphens: auto;
   }
 }
 
