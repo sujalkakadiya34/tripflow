@@ -1825,11 +1825,10 @@ body {
 
 
 /* start ClientTestimonials */
-
 :root {
   --max-width: 1320px;
-  --space-xs: clamp(10px, 1vw, 14px);
-  --space-sm: clamp(16px, 1.6vw, 20px);
+  --space-xs: clamp(24px, 1vw, 14px);
+  --space-sm: clamp(16px, 1.6vw, 16px);
   --space-md: clamp(22px, 2.4vw, 28px);
   --space-lg: clamp(36px, 4vw, 56px);
   --radius: clamp(20px, 3vw, 32px);
@@ -1842,8 +1841,8 @@ body {
   width: 100%;
   padding: var(--space-lg) clamp(16px, 5.5vw, 40px);
   display: flex;
-  margin-top: -80px;
   justify-content: center;
+  margin-top: -80px;
   background: #ffffff;
 }
 
@@ -1853,7 +1852,9 @@ body {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-md);
+  grid-auto-rows: 1fr;
+  column-gap: 20px;
+  row-gap: var(--space-md);
 }
 
 .ct-card {
@@ -1863,11 +1864,11 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  min-height: 380px;
+  min-height: 415px;
 }
 
 .ct-logo img {
-  height: clamp(22px, 3vw, 28px);
+  height: clamp(32px, 4vw, 48px);
   width: auto;
   object-fit: contain;
 }
@@ -1875,9 +1876,10 @@ body {
 .ct-quote {
   margin-top: var(--space-xs);
   font-size: var(--fs-md);
-  line-height: 1.6;
+  line-height: 1.5;
   color: #111;
-  flex-grow: 0;
+  flex-grow: 1;
+  padding-bottom: 24px;
 }
 
 .ct-author {
@@ -1885,6 +1887,7 @@ body {
   align-items: center;
   gap: var(--space-sm);
   margin-top: auto;
+  margin-bottom: -7px;
 }
 
 .ct-avatar img {
@@ -1898,6 +1901,7 @@ body {
   display: flex;
   flex-direction: column;
   min-width: 0;
+  margin-left: -4px;
 }
 
 .ct-author-text h4 {
@@ -1916,15 +1920,9 @@ body {
 
 @media (max-width: 1024px) {
   .ct-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* ================= RESPONSIVE – FIXED ================= */
-@media (max-width: 1024px) {
-  .ct-grid {
     grid-template-columns: 1fr;
-    gap: 36px;
+    column-gap: 0;
+    row-gap: 36px;
   }
 
   .ct-wrapper {
@@ -1936,30 +1934,26 @@ body {
   .ct-card {
     min-height: 640px;
     padding: 36px 40px;
-    display: flex;
-    flex-direction: column;
   }
 
   .ct-logo img {
-    height: 110px;
-    width: auto;
-    object-fit: contain;
-    margin: 0 0 24px 0;
+    height: 90px;
+    margin-top: 10px;
+    margin-bottom: 14px;
   }
 
   .ct-quote {
     font-size: 30px;
     line-height: 1.55;
-    margin: 0 0 36px 0;
+    margin-bottom: 36px;
     text-wrap: balance;
-    word-break: normal;
     hyphens: auto;
   }
 
   .ct-author {
-    margin-top: 54px;
+    margin-top: auto;
     gap: 24px;
-    align-items: center;
+    margin-bottom: 10px;
   }
 
   .ct-avatar img {
@@ -1970,7 +1964,6 @@ body {
   .ct-author-text h4 {
     font-size: 28px;
     line-height: 1.6;
-    font-weight: 600;
   }
 
   .ct-author-text span {
@@ -1978,7 +1971,6 @@ body {
     line-height: 1.85;
     white-space: normal;
     overflow: visible;
-    text-overflow: unset;
   }
 }
 
@@ -2015,9 +2007,6 @@ body {
   .ct-quote {
     font-size: 26px;
     line-height: 1.5;
-    text-wrap: balance;
-    word-break: normal;
-    hyphens: auto;
   }
 }
 
