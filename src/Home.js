@@ -9,6 +9,8 @@ import TrustSection from "./TrustSection";
 import HeroSupport from "./HeroSupport";
 import CustomerTestimonial from "./CustomerTestimonial";
 import ClientTestimonials from "./ClientTestimonials";
+import CustomerTestimonialVariant from "./CustomerTestimonialVariant";
+
 
 const Home = () => {
   return (
@@ -23,7 +25,9 @@ const Home = () => {
         <HeroSupport />
         <CustomerTestimonial />
         <ClientTestimonials />
-      </main>
+        <CustomerTestimonialVariant />
+
+       </main>
     </>
   );
 };
