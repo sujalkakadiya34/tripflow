@@ -24,7 +24,6 @@ const CustomerTestimonialVariant = () => {
             “We were dreading the transition. But onboarding was a breeze. We got 500+ travelers up and running in under 2 weeks — with zero disruption to travel or finance operations.”
             </p>
 
-
           <div className="ctv-author">
             <span className="ctv-author-line"></span>
             <div>
@@ -43,7 +42,7 @@ const CustomerTestimonialVariant = () => {
         {/* RIGHT IMAGE */}
         <div className="ctv-image">
           <img
-            src="./assets/customer-portrait.avif"
+            src="./assets/customer-portrait2.avif"
             alt="Customer portrait"
           />
         </div>
