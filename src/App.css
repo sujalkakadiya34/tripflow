@@ -1717,6 +1717,7 @@ body {
   .testimonial-content {
     width: 100%;
     margin: 0 auto;
+    margin-bottom: -56px;
   }
 
   .testimonial-image {
